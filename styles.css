@@ -1,0 +1,148 @@
+html {
+    height: 100%;
+    background-color: white;
+}
+
+body {
+    height: 100%;
+    margin: 0px;
+}
+
+.nav {
+   text-align: center;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #1d1e22;
+}
+.nav .title {
+   display: inline-block;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+/*.nav a {
+   display: inline-block;
+   color: white;
+   text-align: center;
+   padding: 20px 10px;
+   text-decoration: none;
+   font-family: Monospace;
+   font-size: 13px;
+}*/
+.nav .title {
+   font-size: 16px;
+   font-family: 'Montserrat', sans-serif;
+}
+.nav a {
+   margin-left: -12px;
+   color: white;
+   font-size: 6px;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.home {
+    padding-left: 5px;
+    color: #38424d;
+}
+.home .image {
+    text-align: center;
+}
+.home .image img{
+    box-shadow: 0 2px 20px #38424d;
+    margin-top: 100px;
+    border-radius: 100px;
+    width: 45vw;
+    animation: slideFromLeft 3s ease-in-out infinite;
+}
+@keyframes slideFromLeft {
+    0% {
+    transform:translateY(0) ;
+    }
+    50% {
+    transform:translateY(-2.4rem) ;
+    }
+    100% {
+    transform:translateY(0) ;
+   }
+}
+.home .description {
+    margin: auto;
+}
+.home .description .text-1 {
+    margin-top: 50px;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+.home .description .text-2 span{
+     margin-top: -5px;
+     font-size: 15px;
+     font-family: 'Poppins', sans-serif;
+}
+.home .description a {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 40px;
+    border: 2px solid #1d1e22;
+    border-radius: 5px;
+    background-color: #1d1e22;
+    color: #fff;
+    text-decoration: none;
+}
+
+.home .description a:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+@media (min-width: 400px) {
+    .nav .title {
+        font-size: 20px;
+        padding: 14px 16px;
+    }
+}
+
+@media (min-width: 900px) {
+    .nav .title {
+        padding: 30px 86px;
+        font-size: 45px;
+    }
+    .home .image img {
+        border-radius: 250px;
+    }
+    .nav a {
+    margin-left: -80px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    }
+    .home {
+    padding-left: 10px;
+    color: #38424d;
+}
+    .home .description .text-1 {
+    margin-top: 50px;
+    font-size: 32px;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    }
+    .home .description .text-2 {
+     margin-top: -5px;
+     font-size: 30px;
+     font-family: 'Poppins', sans-serif;
+     }
+     .home .description .text-2 span{
+     margin-top: -5px;
+     font-size: 30px;
+     font-family: 'Poppins', sans-serif;
+     }
+}
