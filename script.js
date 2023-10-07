@@ -1,5 +1,5 @@
 $(function () {
-
+    
     function get_ramadhan_time() {
         return new Date("Januari 1, 2024 00:00:00").getTime();
     }
@@ -45,7 +45,7 @@ $(function () {
         return updated_time;
     }
 
-    var typed = new Typed(".typing-2", {
+    var typed = new Typed(".typing", {
     strings: ["Mengunduh", "Buat Sticker", "Stalking Akun", "Kirim Pesan Anonymous"],
     typeSpeed: 100,
     backSpeed: 60,
