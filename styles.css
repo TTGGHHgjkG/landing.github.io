@@ -44,31 +44,10 @@ body {
 
 /*save #38424d */
 .home {
-    margin-left: 15px;
     color: #FF0000;
 }
-.home .image {
-    text-align: center;
-}
-.home .image img{
-    box-shadow: 0 2px 20px #38424d;
-    margin-top: 100px;
-    border-radius: 100px;
-    width: 45vw;
-    animation: slideFromLeft 3s ease-in-out infinite;
-}
-@keyframes slideFromLeft {
-    0% {
-    transform:translateY(0) ;
-    }
-    50% {
-    transform:translateY(-2.4rem) ;
-    }
-    100% {
-    transform:translateY(0) ;
-   }
-}
 .home .description {
+    width: 350px;
     margin: auto;
 }
 .home .description .ucapan {
@@ -83,10 +62,10 @@ body {
      padding: 15px;
      color: black;
      letter-spacing: 1px;
-     font-weight: 400;
+     font-weight: 500;
      margin-top: -5px;
      font-size: 22px;
-     font-family: Monospace;
+     font-family: 'Poppins';
 }
 .home .description .text-2 {
      padding-top: 15px;
@@ -97,33 +76,38 @@ body {
      font-size: 14px;
      font-family: 'Poppins';
 }
-
-.home .description a {
-    display: inline-block;
-    margin-left: 15px;
-    margin-top: 20px;
-    padding: 0 25px;
-    font-size: 16px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 40px;
-    border: 2px solid #1d1e22;
-    border-radius: 5px;
-    background-color: #1d1e22;
-    color: #fff;
-    text-decoration: none;
+.warning {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 320px;
+  margin-top: 15px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background: #FEF7D1;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px -3px #111;
 }
-
-.home .description a:hover {
-    background-color: white;
-    color: black;
-    border-color: black;
+.warning__icon {
+  width: 20px;
+  height: 20px;
+  transform: translateY(-2px);
+  margin-right: 8px;
+}
+.warning__icon path {
+  fill: #F7C752;
+}
+.warning__title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #755118;
 }
 
 .button-list {
     margin-top: 20px;
 }
-.button-list a i {
+.button-list a {
      margin-left: 15px;
      color: #1d1e22;
 }
@@ -142,63 +126,15 @@ body {
     text-decoration: none;
 }
 
-.container{
-    margin-top: 60px;
-    width: 400px;
-    position: relative;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    overflow: hidden;
-    box-shadow: -1px 5px 15px black;
-}
-
-/*Area of images*/
-.container .wrapper{
-    width: 100%;
-    display: flex;
-    animation: slide 16s infinite;
-}
-
-.container .wrapper img{
-    width: 100%;
-}
-
 footer {
     font-family: Monospace;
     margin-top: 200px;
     text-align: center;
+    padding: 30px;
 }
 footer a i {
     margin-left: 15px;
      color: #1d1e22;
-}
-/*Animation activated by keyframes*/
-@keyframes slide{
-    0%{
-        transform: translateX(0);
-    }
-    25%{
-        transform: translateX(0);
-    }
-    30%{
-        transform: translateX(-100%);
-    }
-    50%{
-        transform: translateX(-100%);
-    }
-    55%{
-        transform: translateX(-200%);
-    }
-    75%{
-        transform: translateX(-200%);
-    }
-    80%{
-        transform: translateX(-300%);
-    }
-    100%{
-        transform: translateX(-300%);
-    }
 }
 
 @media (min-width: 400px) {
@@ -226,26 +162,52 @@ footer a i {
     font-family: 'Montserrat', sans-serif;
     }
     .home {
-    padding-left: 15px;
+    padding: 50px;
     }
-    .home .image img {
-        border-radius: 250px;
+    .home .description {
+    width: 900px;
+    margin: auto;
     }
     .home .description .ucapan {
-    margin-top: 50px;
-    font-size: 32px;
-    font-weight: 800;
     color: #FF0000;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    font-size: 25px;
+    font-weight: 700;
     font-family: 'Poppins', sans-serif;
     }
-    .home .description .text-2 {
+    .home .description .text-1 {
+     width: 400px;
+     margin-left: -16px;
+     color: #1d1e22;
+     letter-spacing: 1px;
+     font-weight: 500;
      margin-top: -5px;
-     font-size: 30px;
-     font-family: 'Poppins', sans-serif;
+     font-size: 27px;
+     font-family: 'Poppins';
      }
-     .home .description .text-2 span{
-     margin-top: -5px;
-     font-size: 30px;
-     font-family: 'Poppins', sans-serif;
+    .home .description .text-2 {
+     width: 400px;
+     float: right;
+     margin-right: -16px;
+     padding: 50px;
+     margin-top: -245px;
+     color: #1d1e22;
+     line-height: 1.2;
+     font-weight: 400;
+     font-size: 20px;
+     font-family: 'Poppins';
+     }
+     .button-list .button {
+     margin-left: 50px;
+     display: inline-block;
+     padding: 5px 30px;
+     font-size: 14px;
+     font-weight: 700;
+     line-height: 40px;
+     border-radius: 50px;
+     background-color: #FF0000;
+     color: white;
+     text-decoration: none;
      }
 }
