@@ -8,7 +8,7 @@ body {
     margin: 0px;
 }
 
-.navbar {
+/*.navbar {
    box-shadow: -1px -3px 8px gray;
    text-align: center;
    list-style-type: none;
@@ -34,12 +34,57 @@ body {
    text-decoration: none;
    font-family: Monospace;
    font-size: 13px;
-}*/
+}
 .navbar a {
    margin-left: -12px;
    color: white;
    font-size: 6px;
    font-family: 'Montserrat', sans-serif;
+}*/
+.navbarr {
+  box-shadow: -1px -3px 8px gray;
+  background-color: #fff;
+  padding: 10px;
+  overflow: hidden;
+}
+.navbarr .navbar a {
+  float: left;
+  display: block;
+  color: black;
+  font-weight: 500;
+  font-family: 'Poppins';
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbarr .navbar a:hover {
+  color: #FF0000;
+}
+.navbarr .navbar a.active {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  color: #1d1e22;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fff;
+}
+.navbarr .navbar a.active span{
+  font-size: 10px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  color: #1d1e22;
+  text-align: center;
+  text-decoration: none;
+}
+.navbarr .click-btn a {
+  float: right;
+  margin-top: 3px;
+  padding: 14px 15px;
+  position: relative;
 }
 
 /*save #38424d */
@@ -125,6 +170,22 @@ body {
     font-family: 'Poppins';
     text-decoration: none;
 }
+.navbar a.button {
+    display: inline-block;
+    text-align-last: center;
+    padding: 5px 5px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    border-radius: 40px;
+    background-color: #FF0000;
+    color: white;
+    font-family: 'Poppins';
+    text-decoration: none;
+}
+.navbar a.button:hover {
+     color: white;
+}
 
 footer {
     font-family: Monospace;
@@ -138,28 +199,59 @@ footer a i {
 }
 
 @media (min-width: 400px) {
-    .navbar .title {
+    /*.navbar .title {
         font-size: 20px;
         padding: 14px 16px;
+    }*/
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+    float: right;
+    display: block;
     }
-     .home .description .text-2 span{
-     margin-top: -5px;
-     letter-spacing: 2px;
-     font-weight: 400;
-     font-size: 22px;
-     }
+    .navbar.responsive {position: relative;}
+    .navbar.responsive a.icon {
+     position: absolute;
+     right: 0;
+     top: 0;
+    }
+    .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+   }
+   .home .description .text-2 span{
+    margin-top: -5px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 22px;
+    }
 }
 
 @media (min-width: 900px) {
-    .navbar .title {
-        padding: 30px 86px;
-        font-size: 45px;
+    .navbarr {
+    box-shadow: -1px -3px 8px gray;
+    background-color: #fff;
+    padding: 20px;
+    overflow: hidden;
     }
-    .navbar a {
-    margin-left: -80px;
-    color: white;
-    font-size: 20px;
+    .navbarr .navbar a.active {
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 800;
     font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    color: #1d1e22;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    }
+    .navbarr .navbar a.active span{
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    color: #1d1e22;
+    text-decoration: none;
     }
     .home {
     padding: 50px;
@@ -171,7 +263,7 @@ footer a i {
     .home .description .ucapan {
     color: #FF0000;
     margin-bottom: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 25px;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
